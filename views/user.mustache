@@ -16,9 +16,14 @@
         <div class="navbar-menu">
             <div class="navbar-end">
                 <div class="navbar-item">
+                    {{#logado}}
                     <form id="logout-form" action="/logout" method="POST">
                         <input type="submit" value="Sair" name="sair" class="button is-danger" />
                     </form>
+                    {{/logado}}
+                    {{^logado}}
+                    <a href="/" class="button is-primary">Login</a>
+                    {{/logado}}
                 </div>
             </div>
         </div>
