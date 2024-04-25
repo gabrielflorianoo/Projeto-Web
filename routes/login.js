@@ -11,12 +11,8 @@ router.post('/', function (req, res, next) {
     if (validador.validate(req.body) == false) {
         res.send("Usuário não criado!");
     } else {
-        res.send("Usuário criado!")
+        res.redirect('/users');
     }
 });
-
-router.get('/', function (req, res, next) {
-
-})
 
 module.exports = router;
