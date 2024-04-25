@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Logout</h1>
+            <div class="notification is-warning">
+                <p>Você está prestes a sair da sua conta. Tem certeza que deseja continuar?</p>
+            </div>
+            <form id="logout-form" action="/logout" method="POST">
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-danger" type="submit">Sair</button>
+                    </div>
+                    <div class="control">
+                        <a class="button is-link" href="/">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
