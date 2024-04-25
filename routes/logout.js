@@ -6,9 +6,10 @@ router.post('/', function(req, res, next) {
     if (req.body.sair == 'true') {
         res.redirect('/');
     } else if (req.body.sair == 'false') {
-        res.redirect('/user');
+        res.redirect('/users');
+    } else {
+        res.render('logout');
     }
-    res.render('logout');
 });
 
 module.exports = router;
