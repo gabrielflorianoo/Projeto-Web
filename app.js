@@ -31,7 +31,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(session({
   secret: '32uv508u0320',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: {
+    maxAge: 3 * 60 * 1000 // Tempo de vida do cookie em minutos
+  }
 }));
 
 app.use("/", indexRouter);
