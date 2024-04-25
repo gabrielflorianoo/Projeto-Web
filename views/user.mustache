@@ -16,11 +16,9 @@
         <div class="navbar-menu">
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <p class="control">
-                        <button class="button is-danger" id="logout-button">
-                            Sair
-                        </button>
-                    </p>
+                    <form id="logout-form" action="/logout" method="POST">
+                        <input type="submit" value="Sair" name="sair" class="button is-danger" />
+                    </form>
                 </div>
             </div>
         </div>
