@@ -6,16 +6,16 @@ const validador = require("../validators/Login.js");
 router.post('/', function (req, res, next) {
     if (req.body.usuario == process.env.ADMIN_USUARIO && req.body.senha == process.env.ADMIN_SENHA) {
         res.redirect('/admin');
-    }
-
-    if (validador.validate(req.body) == false) {
-        res.send("Usuário não criado!");
     } else {
-        const user = req.body;
+        if (validador.validate(req.body) == false) {
+            res.send("Usuário não criado!");
+        } else {
+            const user = req.body;
 
-        req.session.user = user;
+            req.session.user = user;
 
-        res.redirect('/users');
+            res.redirect('/users');
+        }
     }
 });
 
